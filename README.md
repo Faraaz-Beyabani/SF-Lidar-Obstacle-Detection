@@ -24,4 +24,4 @@ Completed code can be found in the src/ folder.
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run: `./ukf_highway`
+4. Run: `./environment`
