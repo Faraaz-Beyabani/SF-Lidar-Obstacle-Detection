@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef BOX_H
 #define BOX_H
 #include <Eigen/Geometry> 

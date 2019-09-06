@@ -1,8 +1,12 @@
 // PCL lib Functions for processing point clouds 
 
+#pragma once
+
 #ifndef PROCESSPOINTCLOUDS_H_
 #define PROCESSPOINTCLOUDS_H_
 
+#include "render/render.h"
+#include "render/box.h"
 #include <pcl/io/pcd_io.h>
 #include <pcl/common/common.h>
 #include <pcl/filters/extract_indices.h>
@@ -12,12 +16,17 @@
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl/segmentation/extract_clusters.h>
 #include <pcl/common/transforms.h>
+
+#include "ransac2d.h"
+#include "kdtree.h"
+#include "cluster.h"
+
 #include <iostream> 
 #include <string>  
 #include <vector>
 #include <ctime>
 #include <chrono>
-#include "render/box.h"
+#include <unordered_set>
 
 template<typename PointT>
 class ProcessPointClouds {
@@ -47,4 +56,5 @@ public:
     std::vector<boost::filesystem::path> streamPcd(std::string dataPath);
   
 };
+
 #endif /* PROCESSPOINTCLOUDS_H_ */
